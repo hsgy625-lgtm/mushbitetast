@@ -190,9 +190,10 @@ body {
     box-shadow: var(--shadow-medium);
 }
 
-.mushroom-placeholder i {
-    font-size: 8rem;
-    color: var(--color-forest-green);
+.company-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
 }
 
 /* 核心价值点 */
@@ -249,6 +250,60 @@ body {
     line-height: 1.6;
 }
 
+/* 项目亮点 */
+.project-highlights {
+    padding: 5rem 0;
+    background: var(--color-warm-white);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.highlight-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+}
+
+.highlight-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.highlight-item h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.highlight-item p {
+    color: var(--color-charcoal);
+    line-height: 1.6;
+}
+
 /* 精选产品展示 */
 .featured-products {
     padding: 5rem 0;
@@ -265,8 +320,10 @@ body {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .product-card {
@@ -324,6 +381,223 @@ body {
     transform: scale(1.05);
 }
 
+/* 技术优势 */
+.tech-advantages {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--color-warm-white) 0%, var(--color-cream) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-advantages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="tech-pattern" patternUnits="userSpaceOnUse" width="50" height="50"><circle cx="25" cy="25" r="1" fill="%238A9A5B" opacity="0.1"/><rect x="20" y="20" width="10" height="10" fill="%23228B22" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23tech-pattern)"/></svg>');
+    opacity: 0.6;
+}
+
+/* 章节标题样式 */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header .section-title {
+    font-size: 2.5rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-header .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 2px;
+}
+
+.section-header .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-charcoal);
+    opacity: 0.8;
+    margin-top: 1rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.tech-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover::before {
+    transform: scaleX(1);
+}
+
+.tech-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-moss-green);
+}
+
+.tech-advantage-item {
+    text-align: center;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.tech-advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-moss-green);
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+}
+
+.tech-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.tech-item:hover .tech-icon {
+    transform: scale(1.1);
+}
+
+.tech-item h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.tech-item p {
+    color: var(--color-charcoal);
+    line-height: 1.6;
+}
+
+/* 社会效益 */
+.social-benefits {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--color-forest-green), var(--color-moss-green));
+    color: white;
+}
+
+.social-benefits .section-header .section-title {
+    color: var(--color-cream);
+}
+
+.social-benefits .section-header .section-subtitle {
+    color: var(--color-warm-white);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-cream), var(--color-warm-white));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: var(--color-forest-green);
+}
+
+.benefit-item:hover .benefit-icon {
+    transform: scale(1.1);
+}
+
+.benefit-item h3 {
+    color: var(--color-cream);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.benefit-item p {
+    color: var(--color-warm-white);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
 /* 使命宣言 */
 .mission {
     padding: 5rem 0;
@@ -347,6 +621,116 @@ body {
     font-size: 1.2rem;
     line-height: 1.8;
     color: var(--color-warm-white);
+}
+
+/* 发展愿景 */
+.vision {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--color-charcoal), var(--color-forest-green));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="0.8" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+    opacity: 0.3;
+}
+
+.vision-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.vision-icon {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--color-cream), var(--color-warm-white));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.vision-icon i {
+    font-size: 3rem;
+    color: var(--color-forest-green);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.vision h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-cream);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.vision-description {
+    margin-bottom: 3rem;
+}
+
+.vision-main {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--color-warm-white);
+    font-weight: 500;
+}
+
+.vision-future {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-warm-white);
+    opacity: 0.9;
+}
+
+.vision-goals {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+}
+
+.goal-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.goal-item i {
+    color: var(--color-cream);
+    font-size: 1.2rem;
+}
+
+.goal-item span {
+    color: var(--color-warm-white);
+    font-weight: 500;
 }
 
 /* 页脚 */
@@ -741,7 +1125,8 @@ body {
 }
 
 .philosophy-points,
-.tech-points {
+.tech-points,
+.eco-points {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
@@ -830,7 +1215,708 @@ body {
     font-weight: 500;
 }
 
-/* 响应式设计 */
+/* 合作伙伴 */
+.partners {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.partner-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.partner-item:hover {
+    transform: translateY(-5px);
+}
+
+.partner-item i {
+    font-size: 3rem;
+    color: #228B22;
+    margin-bottom: 1rem;
+}
+
+.partner-item span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 数据统计 */
+.statistics {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--color-forest-green) 0%, var(--color-pine-green) 100%);
+    color: white;
+}
+
+.statistics .section-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.stat-item:hover::before {
+    left: 100%;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.stat-icon {
+    margin-bottom: 1rem;
+}
+
+.stat-icon i {
+    font-size: 3rem;
+    color: var(--color-mushroom-cream);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.stat-item:hover .stat-icon i {
+    transform: scale(1.1) rotate(5deg);
+    color: var(--color-oatmeal);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-mushroom-cream);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    transition: var(--transition);
+}
+
+.stat-item:hover .stat-number {
+    color: white;
+    transform: scale(1.05);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.stat-item:hover .stat-label {
+    color: white;
+}
+
+/* 客户评价 */
+.testimonials {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.author-info h4 {
+    color: #228B22;
+    margin-bottom: 0.25rem;
+}
+
+.author-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 新闻动态 */
+.news {
+    padding: 4rem 0;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.news-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-date {
+    color: #228B22;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.news-card h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.news-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.news-link {
+    color: #228B22;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.news-link:hover {
+    color: #1a6b1a;
+}
+
+/* 产品详情 */
+.product-details {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    color: #666;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: #228B22;
+    font-weight: 600;
+}
+
+/* 发展历程 */
+.timeline {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #228B22;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 45%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 55%;
+    text-align: left;
+}
+
+.timeline-year {
+    background: #228B22;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+    color: #228B22;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 团队介绍 */
+.team {
+    padding: 4rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.team-member {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    background: #228B22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.member-avatar i {
+    font-size: 2rem;
+    color: white;
+}
+
+.team-member h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.member-title {
+    color: #228B22;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.team-member p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 认证与荣誉 */
+.certifications {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cert-item {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.cert-item:hover {
+    transform: translateY(-5px);
+}
+
+.cert-icon {
+    width: 80px;
+    height: 80px;
+    background: #228B22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.cert-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.cert-item h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.cert-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 公司信息 */
+.company-info {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    width: 80px;
+    height: 80px;
+    background: #228B22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.info-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.info-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+/* 技术流程展示 */
+.tech-process {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--color-warm-white) 0%, var(--color-cream) 100%);
+}
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.process-step {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-moss-green), var(--color-forest-green));
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-moss-green);
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.step-content h3 {
+    color: var(--color-charcoal);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.step-content p {
+    color: var(--color-warm-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.step-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.step-features span {
+    background: var(--color-cream);
+    color: var(--color-charcoal);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.step-features span:hover {
+    background: var(--color-moss-green);
+    color: white;
+}
+
+.step-features i {
+    color: var(--color-forest-green);
+}
+
+.step-features span:hover i {
+    color: white;
+}
+
+/* 市场前景 */
+.market-prospects {
+    padding: 5rem 0;
+    background: var(--color-warm-white);
+}
+
+.prospects-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.prospect-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border-left: 4px solid var(--color-moss-green);
+}
+
+.prospect-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+.prospect-item h3 {
+    color: var(--color-forest-green);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.prospect-item p {
+    color: var(--color-charcoal);
+    line-height: 1.6;
+}
+
+/* 新闻动态部分样式优化 */
+.news-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.news-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    display: flex;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.news-date {
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    text-align: center;
+}
+
+.news-date .day {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.news-date .month {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.news-content {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.news-content h3 {
+    color: var(--color-charcoal);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.news-content p {
+    color: var(--color-warm-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.news-link {
+    color: var(--color-moss-green);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.news-link:hover {
+    color: var(--color-forest-green);
+    gap: 0.8rem;
+}
+
+/* 响应式设计优化 */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -908,6 +1994,61 @@ body {
     .category-tab {
         width: 200px;
     }
+
+    .timeline-container::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left;
+        padding-left: 50px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .partners-grid,
+    .testimonials-grid,
+    .news-grid,
+    .team-grid,
+    .cert-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-timeline {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .process-step {
+        padding: 1.5rem;
+    }
+    
+    .step-number {
+        font-size: 2.5rem;
+    }
+    
+    .prospects-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-card {
+        flex-direction: column;
+    }
+    
+    .news-date {
+        min-width: auto;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -928,9 +2069,1411 @@ body {
     }
     
     .values-grid,
-    .products-grid,
     .contact-grid,
     .advantages-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .tech-advantages-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .timeline-item {
+        padding-left: 40px;
+    }
+
+    .step-features {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .step-features span {
+        justify-content: center;
+    }
+    
+    .news-content {
+        padding: 1rem;
+    }
+}
+
+/* 产品详情模态框 */
+.product-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 2% auto;
+    padding: 0;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-warm-gray);
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.close-modal:hover {
+    color: var(--color-charcoal);
+    background: white;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+}
+
+.modal-image {
+    background: linear-gradient(135deg, var(--color-cream), var(--color-oatmeal));
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+}
+
+.modal-image i {
+    font-size: 8rem;
+    color: var(--color-moss-green);
+}
+
+.modal-info {
+    padding: 3rem;
+}
+
+.modal-info h2 {
+    color: var(--color-charcoal);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-tags .tag {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.modal-info p {
+    color: var(--color-warm-gray);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.modal-details {
+    margin-bottom: 2rem;
+}
+
+.modal-features {
+    margin-bottom: 2rem;
+}
+
+.modal-features h3,
+.modal-details h3 {
+    color: var(--color-charcoal);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.modal-nutrition {
+    margin-bottom: 2rem;
+}
+
+.modal-nutrition h3 {
+    color: var(--color-charcoal);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.nutrition-item {
+    background: var(--color-cream);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.nutrition-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-moss-green);
+    margin-bottom: 0.5rem;
+}
+
+.nutrition-label {
+    color: var(--color-charcoal);
+    font-size: 0.9rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background: var(--color-cream);
+    color: var(--color-charcoal);
+    border: 2px solid var(--color-moss-green);
+}
+
+.btn-secondary:hover {
+    background: var(--color-moss-green);
+    color: white;
+}
+
+/* 模态框动画 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+    
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-image {
+        border-radius: 20px 20px 0 0;
+        padding: 2rem;
+    }
+    
+    .modal-image i {
+        font-size: 5rem;
+    }
+    
+    .modal-info {
+        padding: 2rem;
+    }
+    
+    .modal-info h2 {
+        font-size: 2rem;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 98%;
+        margin: 2% auto;
+    }
+    
+    .modal-info {
+        padding: 1.5rem;
+    }
+    
+    .modal-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .nutrition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.back-to-top.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, var(--color-forest-green), var(--color-pine-green));
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top i {
+    transition: var(--transition);
+}
+
+.back-to-top:hover i {
+    transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+/* 加载动画 */
+.loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-warm-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease;
+}
+
+.loading-spinner.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--color-cream);
+    border-top: 4px solid var(--color-moss-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 性能优化：减少重绘和重排 */
+.optimized-animation {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 焦点样式优化 */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--color-moss-green);
+    outline-offset: 2px;
+}
+
+/* 减少动画在低端设备上的性能消耗 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    :root {
+        --color-charcoal: #000000;
+        --color-warm-white: #ffffff;
+        --color-moss-green: #006400;
+        --color-forest-green: #008000;
+    }
+}
+
+/* 打印样式优化 */
+@media print {
+    .navbar,
+    .back-to-top,
+    .loading-spinner,
+    .cta-button,
+    .product-btn {
+        display: none !important;
+    }
+    
+    body {
+        color: black !important;
+        background: white !important;
+    }
+    
+    .container {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+}
+
+/* 产品特色部分样式 */
+.product-features-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+}
+
+.product-features-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.product-features-section .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-charcoal);
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-moss-green), var(--color-forest-green));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-moss-green);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.feature-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: var(--color-charcoal);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.feature-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-charcoal);
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    background: var(--color-cream);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.highlight-item:hover {
+    background: var(--color-moss-green);
+    color: white;
+    transform: translateX(5px);
+}
+
+.highlight-item i {
+    color: var(--color-moss-green);
+    font-size: 0.8rem;
+}
+
+.highlight-item:hover i {
+    color: white;
+}
+
+/* 质量保证部分样式 */
+.quality-assurance {
+    padding: 4rem 0;
+    background: var(--color-warm-white);
+}
+
+.quality-assurance .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.quality-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.quality-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-moss-green), var(--color-forest-green));
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.quality-card:hover::after {
+    width: 80%;
+}
+
+.quality-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-moss-green);
+}
+
+.quality-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.quality-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.quality-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.quality-card p {
+    color: var(--color-charcoal);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .product-features-section .section-title,
+    .quality-assurance .section-title {
+        font-size: 2rem;
+    }
+    
+    .features-grid,
+    .quality-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card,
+    .quality-card {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .feature-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .quality-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .quality-icon i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-features-section,
+    .quality-assurance {
+        padding: 2rem 0;
+    }
+    
+    .product-features-section .section-title,
+    .quality-assurance .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature-card h3,
+    .quality-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .feature-card p,
+    .quality-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* 品质承诺卡片样式 */
+.quality-commitment {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+}
+
+.commitment-card {
+    background: white;
+    border-radius: 25px;
+    box-shadow: var(--shadow-medium);
+    padding: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid var(--color-moss-green);
+    position: relative;
+    overflow: hidden;
+}
+
+.commitment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--color-moss-green), var(--color-forest-green), var(--color-moss-green));
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+.commitment-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.commitment-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-medium);
+    flex-shrink: 0;
+}
+
+.commitment-icon i {
+    font-size: 3rem;
+    color: white;
+}
+
+.commitment-title h2 {
+    font-size: 2.5rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.commitment-title p {
+    font-size: 1.2rem;
+    color: var(--color-charcoal);
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.commitment-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.commitment-badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--color-warm-white);
+    border-radius: 15px;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.commitment-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--color-moss-green);
+    background: white;
+}
+
+.badge-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.badge-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.badge-content h4 {
+    font-size: 1.1rem;
+    color: var(--color-forest-green);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.badge-content p {
+    font-size: 0.9rem;
+    color: var(--color-charcoal);
+    margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .commitment-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .commitment-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .commitment-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .commitment-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .commitment-title h2 {
+        font-size: 2rem;
+    }
+    
+    .commitment-title p {
+        font-size: 1.1rem;
+    }
+    
+    .commitment-badges {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .commitment-badge {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quality-commitment {
+        padding: 2rem 0;
+    }
+    
+    .commitment-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .commitment-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .commitment-title p {
+        font-size: 1rem;
+    }
+    
+    .badge-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .badge-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .badge-content h4 {
+        font-size: 1rem;
+    }
+    
+    .badge-content p {
+        font-size: 0.85rem;
+    }
+    
+    /* 响应式设计优化 */
+    .section-header .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-header .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .tech-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tech-item,
+    .benefit-item {
+        padding: 2rem;
+    }
+    
+    .vision h2 {
+        font-size: 2.2rem;
+    }
+    
+    .vision-main {
+        font-size: 1.1rem;
+    }
+    
+    .vision-future {
+        font-size: 1rem;
+    }
+    
+    .vision-goals {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .goal-item {
+        padding: 0.8rem 1.2rem;
+    }
+    
+    .vision-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .vision-icon i {
+        font-size: 2.5rem;
+    }
+}
+
+/* 联系我们页面新样式 */
+
+/* 主要联系信息 */
+.main-contact {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--color-warm-white) 0%, var(--color-cream) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.main-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="contact-pattern" patternUnits="userSpaceOnUse" width=\"40\" height=\"40\"><circle cx=\"20\" cy=\"20\" r=\"1\" fill=\"%238A9A5B\" opacity=\"0.1\"/><rect x=\"15\" cy=\"15\" width=\"10\" height=\"10\" fill=\"%23228B22\" opacity=\"0.05\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23contact-pattern)\"/></svg>');
+    opacity: 0.4;
+}
+
+.contact-hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero-content h2 {
+    font-size: 3rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.contact-hero-content p {
+    font-size: 1.2rem;
+    color: var(--color-charcoal);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+.contact-cta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    color: white;
+    box-shadow: var(--shadow-medium);
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+    background: linear-gradient(135deg, var(--color-forest-green), var(--color-moss-green));
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: var(--color-forest-green);
+    border-color: var(--color-forest-green);
+}
+
+.cta-button.secondary:hover {
+    background: var(--color-forest-green);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.contact-hero-image {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-medium);
+    animation: float 6s ease-in-out infinite;
+}
+
+.contact-hero-image i {
+    font-size: 4rem;
+    color: white;
+}
+
+/* 联系信息卡片优化 */
+.contact-info {
+    padding: 5rem 0;
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.contact-item {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-moss-green), var(--color-forest-green));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-moss-green);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+}
+
+.contact-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.contact-item h3 {
+    font-size: 1.4rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact-detail {
+    color: var(--color-charcoal);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--color-warm-white);
+    color: var(--color-forest-green);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.contact-link:hover {
+    background: var(--color-forest-green);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.contact-status {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.contact-status.online {
+    background: #e8f5e8;
+    color: #2d5a2d;
+    border: 1px solid #4caf50;
+}
+
+/* 公司详细信息 */
+.company-details {
+    padding: 5rem 0;
+    background: var(--color-warm-white);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.detail-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-moss-green), var(--color-forest-green));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.detail-card:hover::after {
+    transform: scaleX(1);
+}
+
+.detail-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--color-moss-green);
+}
+
+.detail-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+}
+
+.detail-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.detail-card:hover .detail-icon {
+    transform: scale(1.1);
+}
+
+.detail-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.detail-card p {
+    color: var(--color-charcoal);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .contact-hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .contact-hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .contact-cta {
+        justify-content: center;
+    }
+    
+    .contact-hero-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    
+    .contact-hero-image i {
+        font-size: 3rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-item,
+    .detail-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-contact {
+        padding: 3rem 0;
+    }
+    
+    .contact-hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .contact-hero-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .contact-hero-image i {
+        font-size: 2.5rem;
+    }
+    
+    .contact-info {
+        padding: 3rem 0;
+    }
+    
+    .company-details {
+        padding: 3rem 0;
+    }
+    
+    .contact-item,
+    .detail-card {
+        padding: 1.5rem;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .contact-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .detail-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .detail-icon i {
+        font-size: 1.3rem;
     }
 }

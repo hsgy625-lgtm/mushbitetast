@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系我们 - MUSHBITE</title>
+    <title>联系我们 - 一口菇Mushbite</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>MUSHBITE</h2>
+                <h2>一口菇Mushbite</h2>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html">首页</a></li>
@@ -37,7 +37,32 @@
         </div>
     </section>
 
-    <!-- 联系信息 -->
+    <!-- 主要联系信息 -->
+    <section class="main-contact">
+        <div class="container">
+            <div class="contact-hero">
+                <div class="contact-hero-content">
+                    <h2>随时为您服务</h2>
+                    <p>无论您有任何问题、建议或合作意向，我们都非常乐意为您提供帮助。选择最适合您的联系方式，我们将尽快回复您。</p>
+                    <div class="contact-cta">
+                        <a href="mailto:mushbite@gmail.com" class="cta-button primary">
+                            <i class="fas fa-envelope"></i>
+                            发送邮件
+                        </a>
+                        <a href="tel:+6580670401" class="cta-button secondary">
+                            <i class="fas fa-phone"></i>
+                            立即致电
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-hero-image">
+                    <i class="fas fa-headset"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系信息卡片 -->
     <section class="contact-info">
         <div class="container">
             <div class="contact-grid">
@@ -46,76 +71,35 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>邮箱联系</h3>
-                    <p>info@mushbite.com</p>
-                    <p>business@mushbite.com</p>
+                    <p class="contact-detail">mushbite@gmail.com</p>
+                    <a href="mailto:mushbite@gmail.com" class="contact-link">发送邮件</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
                     </div>
                     <h3>电话咨询</h3>
-                    <p>+86 400-888-8888</p>
-                    <p>+86 021-8888-8888</p>
+                    <p class="contact-detail">+65 80670401</p>
+                    <a href="tel:+6580670401" class="contact-link">立即致电</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>公司地址</h3>
-                    <p>上海市浦东新区张江高科技园区</p>
-                    <p>科苑路123号MUSHBITE大厦</p>
+                    <p class="contact-detail">150 SOUTH BRIDGE ROAD, #02-08</p>
+                    <p class="contact-detail">FOOK HAI BUILDING, SINGAPORE 058727</p>
+                    <a href="#" class="contact-link">查看地图</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">
                         <i class="fas fa-clock"></i>
                     </div>
                     <h3>工作时间</h3>
-                    <p>周一至周五: 9:00-18:00</p>
-                    <p>周六: 9:00-12:00</p>
+                    <p class="contact-detail">周一至周五: 8:00-18:00</p>
+                    <p class="contact-detail">周六: 9:00-16:00</p>
+                    <span class="contact-status online">当前在线</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系表单 -->
-    <section class="contact-form">
-        <div class="container">
-            <div class="form-container">
-                <h2>发送消息</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">姓名 *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">公司名称</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">邮箱 *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">电话</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="inquiry-type">咨询类型 *</label>
-                        <select id="inquiry-type" name="inquiry-type" required>
-                            <option value="">请选择咨询类型</option>
-                            <option value="wholesale">批发合作</option>
-                            <option value="retail">零售咨询</option>
-                            <option value="partnership">战略合作</option>
-                            <option value="investment">投资合作</option>
-                            <option value="other">其他</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">详细说明 *</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="请详细描述您的需求或合作意向..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">发送消息</button>
-                </form>
             </div>
         </div>
     </section>
@@ -123,7 +107,10 @@
     <!-- 合作优势 -->
     <section class="cooperation-advantages">
         <div class="container">
-            <h2 class="section-title">为什么选择与MUSHBITE合作？</h2>
+            <div class="section-header">
+                <h2 class="section-title">为什么选择与MUSHBITE合作？</h2>
+                <p class="section-subtitle">专业、可靠、可持续的合作伙伴</p>
+            </div>
             <div class="advantages-grid">
                 <div class="advantage-item">
                     <div class="advantage-icon">
@@ -157,13 +144,48 @@
         </div>
     </section>
 
+    <!-- 公司详细信息 -->
+    <section class="company-details">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">公司详细信息</h2>
+                <p class="section-subtitle">了解更多关于MUSHBITE的信息</p>
+            </div>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>公司概况</h3>
+                    <p>MUSHBITE是一家专注于智慧农业和食用菌种植的现代化企业，致力于为全球客户提供高品质、安全可靠的食用菌产品。</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <h3>业务范围</h3>
+                    <p>我们的业务覆盖新加坡、马来西亚、印度尼西亚和越南等东南亚国家，建立了完整的供应链网络。</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>认证资质</h3>
+                    <p>通过国际有机农业联盟（IFOAM）、HACCP食品安全认证等多项国际认证，确保产品品质。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>MUSHBITE</h3>
-                    <p>源自地底的非凡滋味</p>
+                    <h3>一口菇Mushbite</h3>
+                    <p>智慧农业引领者</p>
                 </div>
                 <div class="footer-section">
                     <h4>快速链接</h4>
@@ -176,15 +198,20 @@
                 </div>
                 <div class="footer-section">
                     <h4>联系方式</h4>
-                    <p>邮箱: info@mushbite.com</p>
-                    <p>电话: +86 400-888-8888</p>
+                    <p>邮箱: mushbite@gmail.com</p>
+                    <p>电话: +65 80670401</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 MUSHBITE. 保留所有权利.</p>
+                <p>&copy; 2024 一口菇Mushbite. 保留所有权利.</p>
             </div>
         </div>
     </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="back-to-top" title="返回顶部">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
