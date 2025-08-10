@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品 - MUSHBITE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MUSHBITE</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="products.html">产品</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>我们的产品</h1>
+            <p>探索MUSHBITE精心培育的优质蘑菇品种</p>
+        </div>
+    </section>
+
+    <!-- 产品分类 -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="edible">食用菌</button>
+                <button class="category-tab" data-category="medicinal">药用菌</button>
+                <button class="category-tab" data-category="rare">珍稀品种</button>
+                <button class="category-tab" data-category="processed">蘑菇制品</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品列表 -->
+    <section class="products-section">
+        <div class="container">
+            <!-- 食用菌 -->
+            <div class="product-category active" id="edible">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>香菇</h3>
+                            <div class="product-tags">
+                                <span class="tag organic">有机认证</span>
+                                <span class="tag protein">高蛋白</span>
+                                <span class="tag vitamin">富含维生素D</span>
+                            </div>
+                            <p class="product-description">传统美味，营养丰富，口感鲜美</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>金针菇</h3>
+                            <div class="product-tags">
+                                <span class="tag organic">有机认证</span>
+                                <span class="tag fiber">高纤维</span>
+                                <span class="tag low-calorie">低热量</span>
+                            </div>
+                            <p class="product-description">口感脆嫩，适合多种烹饪方式</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>平菇</h3>
+                            <div class="product-tags">
+                                <span class="tag organic">有机认证</span>
+                                <span class="tag antioxidant">抗氧化</span>
+                                <span class="tag immune">增强免疫</span>
+                            </div>
+                            <p class="product-description">肉质厚实，营养丰富，烹饪多样</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 药用菌 -->
+            <div class="product-category" id="medicinal">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>舞茸</h3>
+                            <div class="product-tags">
+                                <span class="tag medicinal">药用价值</span>
+                                <span class="tag immune">免疫支持</span>
+                                <span class="tag beta-glucan">富含β-葡聚糖</span>
+                            </div>
+                            <p class="product-description">免疫支持，活力之源，传统药用</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>灵芝</h3>
+                            <div class="product-tags">
+                                <span class="tag medicinal">药用价值</span>
+                                <span class="tag adaptogen">适应原</span>
+                                <span class="tag triterpenes">三萜类化合物</span>
+                            </div>
+                            <p class="product-description">传统名贵药材，调节免疫系统</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 珍稀品种 -->
+            <div class="product-category" id="rare">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>羊肚菌</h3>
+                            <div class="product-tags">
+                                <span class="tag rare">珍稀品种</span>
+                                <span class="tag premium">高端品质</span>
+                                <span class="tag aromatic">香气馥郁</span>
+                            </div>
+                            <p class="product-description">林中钻石，香气馥郁，顶级食材</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>松茸</h3>
+                            <div class="product-tags">
+                                <span class="tag rare">珍稀品种</span>
+                                <span class="tag premium">高端品质</span>
+                                <span class="tag seasonal">季节性</span>
+                            </div>
+                            <p class="product-description">菌中之王，香气独特，营养丰富</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 蘑菇制品 -->
+            <div class="product-category" id="processed">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>蘑菇粉</h3>
+                            <div class="product-tags">
+                                <span class="tag processed">精制加工</span>
+                                <span class="tag convenient">即食方便</span>
+                                <span class="tag concentrated">浓缩营养</span>
+                            </div>
+                            <p class="product-description">营养浓缩，便于携带，多种用途</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <i class="fas fa-mushroom"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>蘑菇提取物</h3>
+                            <div class="product-tags">
+                                <span class="tag processed">精制加工</span>
+                                <span class="tag extract">高纯度</span>
+                                <span class="tag supplement">营养补充</span>
+                            </div>
+                            <p class="product-description">高纯度提取，专业营养补充</p>
+                            <button class="product-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MUSHBITE</h3>
+                    <p>源自地底的非凡滋味</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="products.html">产品</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>邮箱: info@mushbite.com</p>
+                    <p>电话: +86 400-888-8888</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MUSHBITE. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,936 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 主色调 - 大地色系 */
+    --color-earth-brown: #8B7355;
+    --color-warm-gray: #A8A8A8;
+    --color-cream: #F5F5DC;
+    --color-oatmeal: #D2B48C;
+    
+    /* 森林色系 */
+    --color-moss-green: #8A9A5B;
+    --color-forest-green: #228B22;
+    --color-pine-green: #2F4F2F;
+    
+    /* 中性高级感 */
+    --color-charcoal: #36454F;
+    --color-warm-white: #FAFAFA;
+    --color-wood: #DEB887;
+    
+    /* 蘑菇本色点缀 */
+    --color-mushroom-brown: #8B4513;
+    --color-mushroom-cream: #F0E68C;
+    
+    /* 活力点缀 */
+    --color-tomato-red: #FF6347;
+    --color-pumpkin-orange: #FF8C00;
+    
+    /* 阴影和过渡 */
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 15px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    background-color: var(--color-warm-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--shadow-soft);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo h2 {
+    color: var(--color-forest-green);
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-charcoal);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--color-forest-green);
+}
+
+/* 蘑菇主题的悬停效果 */
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-moss-green);
+    transition: var(--transition);
+    border-radius: 1px;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--color-charcoal);
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+/* 首屏 */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+    padding-top: 80px;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--color-charcoal);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.cta-button {
+    background: var(--color-forest-green);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+}
+
+.cta-button:hover {
+    background: var(--color-pine-green);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mushroom-placeholder {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, var(--color-mushroom-cream), var(--color-mushroom-brown));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-medium);
+}
+
+.mushroom-placeholder i {
+    font-size: 8rem;
+    color: var(--color-forest-green);
+}
+
+/* 核心价值点 */
+.values {
+    padding: 5rem 0;
+    background: var(--color-warm-white);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-moss-green), var(--color-forest-green));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+}
+
+.value-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.value-item h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.value-item p {
+    color: var(--color-charcoal);
+    line-height: 1.6;
+}
+
+/* 精选产品展示 */
+.featured-products {
+    padding: 5rem 0;
+    background: var(--color-cream);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-forest-green);
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.product-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--color-mushroom-cream), var(--color-mushroom-brown));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image i {
+    font-size: 4rem;
+    color: var(--color-forest-green);
+}
+
+.product-card h3 {
+    color: var(--color-forest-green);
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.product-description {
+    color: var(--color-charcoal);
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.product-btn {
+    background: var(--color-moss-green);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+}
+
+.product-btn:hover {
+    background: var(--color-forest-green);
+    transform: scale(1.05);
+}
+
+/* 使命宣言 */
+.mission {
+    padding: 5rem 0;
+    background: var(--color-forest-green);
+    color: white;
+}
+
+.mission-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-cream);
+}
+
+.mission-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-warm-white);
+}
+
+/* 页脚 */
+.footer {
+    background: var(--color-charcoal);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: var(--color-cream);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--color-warm-white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: var(--color-moss-green);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-warm-gray);
+    color: var(--color-warm-gray);
+}
+
+/* 页面标题 */
+.page-header {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, var(--color-cream), var(--color-warm-white));
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--color-charcoal);
+}
+
+/* 产品分类 */
+.product-categories {
+    padding: 3rem 0;
+    background: var(--color-warm-white);
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.category-tab {
+    background: white;
+    border: 2px solid var(--color-moss-green);
+    color: var(--color-moss-green);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.category-tab.active,
+.category-tab:hover {
+    background: var(--color-moss-green);
+    color: white;
+}
+
+/* 产品分类内容 */
+.product-category {
+    display: none;
+}
+
+.product-category.active {
+    display: block;
+}
+
+/* 产品标签 */
+.product-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tag.organic {
+    background: var(--color-moss-green);
+    color: white;
+}
+
+.tag.protein {
+    background: var(--color-tomato-red);
+    color: white;
+}
+
+.tag.vitamin {
+    background: var(--color-pumpkin-orange);
+    color: white;
+}
+
+.tag.medicinal {
+    background: var(--color-forest-green);
+    color: white;
+}
+
+.tag.rare {
+    background: var(--color-mushroom-brown);
+    color: white;
+}
+
+.tag.premium {
+    background: var(--color-charcoal);
+    color: white;
+}
+
+/* 联系信息 */
+.contact-info {
+    padding: 4rem 0;
+    background: var(--color-warm-white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-moss-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+}
+
+.contact-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.contact-item h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.contact-item p {
+    color: var(--color-charcoal);
+    margin-bottom: 0.5rem;
+}
+
+/* 联系表单 */
+.contact-form {
+    padding: 4rem 0;
+    background: var(--color-cream);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-medium);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--color-forest-green);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-charcoal);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--color-warm-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-moss-green);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--color-forest-green);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background: var(--color-pine-green);
+    transform: translateY(-2px);
+}
+
+/* 合作优势 */
+.cooperation-advantages {
+    padding: 4rem 0;
+    background: var(--color-warm-white);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.advantage-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--color-moss-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+}
+
+.advantage-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.advantage-item h3 {
+    color: var(--color-forest-green);
+    margin-bottom: 1rem;
+}
+
+.advantage-item p {
+    color: var(--color-charcoal);
+    line-height: 1.6;
+}
+
+/* 关于我们页面特定样式 */
+.our-story {
+    padding: 4rem 0;
+    background: var(--color-warm-white);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.story-text h2 {
+    color: var(--color-forest-green);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-text p {
+    color: var(--color-charcoal);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.story-image {
+    text-align: center;
+}
+
+.story-image i {
+    font-size: 8rem;
+    color: var(--color-moss-green);
+}
+
+.our-approach {
+    padding: 4rem 0;
+    background: var(--color-cream);
+}
+
+.approach-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: start;
+}
+
+.approach-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--color-forest-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.approach-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.approach-content h3 {
+    color: var(--color-forest-green);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.approach-content p {
+    color: var(--color-charcoal);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.philosophy-points,
+.tech-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-charcoal);
+}
+
+.point i {
+    color: var(--color-moss-green);
+}
+
+.values-mission {
+    padding: 4rem 0;
+    background: var(--color-warm-white);
+}
+
+.values-mission-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.mission-section h2,
+.values-section h2 {
+    color: var(--color-forest-green);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.mission-section p {
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.core-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.value h4 {
+    color: var(--color-forest-green);
+    margin-bottom: 0.5rem;
+}
+
+.value p {
+    color: var(--color-charcoal);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.farm-glimpse {
+    padding: 4rem 0;
+    background: var(--color-cream);
+}
+
+.farm-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.farm-image {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-soft);
+}
+
+.farm-image i {
+    font-size: 3rem;
+    color: var(--color-moss-green);
+    margin-bottom: 1rem;
+}
+
+.farm-image p {
+    color: var(--color-forest-green);
+    font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--shadow-soft);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 6rem 1rem 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .mushroom-placeholder {
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+    }
+    
+    .mushroom-placeholder i {
+        font-size: 5rem;
+    }
+    
+    .story-content,
+    .values-mission-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .approach-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .approach-icon {
+        margin: 0 auto;
+    }
+    
+    .core-values {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .category-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category-tab {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav-container {
+        padding: 1rem;
+    }
+    
+    .values-grid,
+    .products-grid,
+    .contact-grid,
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+}
