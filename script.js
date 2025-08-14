@@ -506,18 +506,19 @@ function setNutritionInfo(productName, nutritionGrid) {
             { value: '2.1g', label: '膳食纤维/100g' },
             { value: '22kcal', label: '热量/100g' }
         ],
+        '双孢菇': [
+            { value: '3.2g', label: '蛋白质/100g' },
+            { value: '0.4μg', label: '维生素D/100g' },
+            { value: '2.0g', label: '膳食纤维/100g' },
+            { value: '21kcal', label: '热量/100g' }
+        ],
         'Cremini蘑菇': [
             { value: '3.1g', label: '蛋白质/100g' },
             { value: '0.3μg', label: '维生素D/100g' },
             { value: '2.0g', label: '膳食纤维/100g' },
             { value: '20kcal', label: '热量/100g' }
         ],
-        '巴西蘑菇': [
-            { value: '3.5g', label: '蛋白质/100g' },
-            { value: '0.5μg', label: '维生素D/100g' },
-            { value: '2.5g', label: '膳食纤维/100g' },
-            { value: '25kcal', label: '热量/100g' }
-        ],
+        // 已移除：巴西蘑菇（根据需求）
         '白蘑菇': [
             { value: '3.2g', label: '蛋白质/100g' },
             { value: '0.4μg', label: '维生素D/100g' },

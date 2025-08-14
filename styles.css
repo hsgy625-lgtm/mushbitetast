@@ -285,7 +285,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 0 auto;
 }
 
 .highlight-icon i {
@@ -295,7 +295,7 @@ body {
 
 .highlight-item h3 {
     color: var(--color-forest-green);
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     font-size: 1.3rem;
 }
 
@@ -326,6 +326,14 @@ body {
     margin: 0 auto;
 }
 
+.products-agrid {
+    display: grid;
+    grid-template-columns: repeat(0, 1fr);
+    gap: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 .product-card {
     background: white;
     border-radius: 15px;
@@ -338,6 +346,64 @@ body {
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
+}
+
+/* 首页“双孢菇”卡片增强 */
+.product-card.featured {
+    position: relative;
+    border: 2px solid rgba(34,139,34,0.12);
+}
+
+.ribbon {
+    position: absolute;
+    top: 12px;
+    left: -8px;
+    background: linear-gradient(135deg, #ff7a18, #ffb800);
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(255,140,0,0.25);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ribbon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-left: 8px solid #cc7a00;
+    border-top: 8px solid transparent;
+}
+
+.ribbon-hot i {
+    font-size: 0.9rem;
+}
+
+.divider {
+    height: 1px;
+    margin: 12px auto 8px;
+    width: 88%;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent);
+}
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 8px 0 12px;
+}
+
+.rating i {
+    color: #f5a623;
+}
+
+.rating-score {
+    color: var(--color-charcoal);
+    font-weight: 700;
 }
 
 .product-image {
@@ -1712,7 +1778,7 @@ body {
 
 .process-timeline {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -2572,8 +2638,8 @@ textarea:focus {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
     margin-top: 2rem;
 }
 

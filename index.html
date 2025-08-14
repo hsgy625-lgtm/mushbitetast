@@ -38,7 +38,7 @@
         </div>
         <div class="hero-image">
             <div class="mushroom-placeholder">
-                <img src="logo.jpg" alt="一口菇Mushbite Logo" class="company-logo">
+                <img src="logo.png" alt="一口菇Mushbite Logo" class="company-logo">
             </div>
         </div>
     </section>
@@ -82,21 +82,21 @@
                         <i class="fas fa-industry"></i>
                     </div>
                     <h3>生产规模</h3>
-                    <p>2栋智能化菇房，66间种植车间，年产8000吨优质蘑菇</p>
+                    <p>2栋智能菇房，66个种植间<br>年产8000吨优质蘑菇</p>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>就业机会</h3>
-                    <p>为周边提供450-500个就业岗位，促进当地经济发展</p>
+                    <p>提供450-500个就业岗位<br>促进当地经济发展</p>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-icon">
                         <i class="fas fa-dollar-sign"></i>
                     </div>
                     <h3>投资规模</h3>
-                    <p>总投资6000万新币，打造新加坡领先的智慧农业基地</p>
+                    <p>总投资约6000万新币<br>打造先进的智慧农业基地</p>
                 </div>
             </div>
         </div>
@@ -109,33 +109,101 @@
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <i class="fas fa-mushroom"></i>
+                        <img src="brown.jpg" alt="褐松茸" class="product-image">
                     </div>
-                    <h3>褐蘑菇 (Portabella)</h3>
-                    <p class="product-description">"素牛排"，含蛋白质25-33%，无胆固醇</p>
+                    <h3>褐松茸 </h3>
+                    <p class="product-description">美国FDA认定的健康食品，被誉为"素牛排"，口感细腻、香味浓郁</p>
+                    <div class="product-tags">
+                        <span class="tag organic">有机认证</span>
+                        <span class="tag protein">高蛋白</span>
+                        <span class="tag premium">高端品种</span>
+                    </div>
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <span class="detail-label">蛋白质含量:</span>
+                            <span class="detail-value">25-33%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">粗纤维:</span>
+                            <span class="detail-value">9%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">胆固醇:</span>
+                            <span class="detail-value">0%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">种植方式:</span>
+                            <span class="detail-value">智能化栽培</span>
+                        </div>
+                    </div>
                     <div class="product-features">
-                        <span class="feature-tag">高蛋白</span>
-                        <span class="feature-tag">低脂肪</span>
-                        <span class="feature-tag">有机认证</span>
+                        <div class="feature-item"><i class="fas fa-star"></i><span>口感细腻 香味浓郁</span></div>
+                        <div class="feature-item"><i class="fas fa-heart"></i><span>低脂肪 无胆固醇</span></div>
                     </div>
                     <button class="product-btn">了解更多</button>
                 </div>
-                <div class="product-card">
+                <div class="product-card featured">
                     <div class="product-image">
-                        <i class="fas fa-mushroom"></i>
+                         <img src="white.jpg" alt="双孢菇" class="product-image">
                     </div>
                     <h3>双孢菇</h3>
-                    <p class="product-description">传统美味，营养丰富，口感鲜美</p>
+                    <p class="product-description">传统美味，营养丰富，口感鲜美，是市场上最受欢迎的蘑菇之一</p>
+                    <div class="product-tags">
+                        <span class="tag organic">有机认证</span>
+                        <span class="tag traditional">传统品种</span>
+                        <span class="tag nutritious">营养丰富</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <span class="detail-label">蛋白质含量:</span>
+                            <span class="detail-value">3.2g/100g</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">维生素D:</span>
+                            <span class="detail-value">0.4μg/100g</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">种植方式:</span>
+                            <span class="detail-value">智能化栽培</span>
+                        </div>
+                    </div>
                     <div class="product-features">
-                        <span class="feature-tag">传统品种</span>
-                        <span class="feature-tag">营养丰富</span>
-                        <span class="feature-tag">有机栽培</span>
+                        <div class="feature-item"><i class="fas fa-leaf"></i><span>口感鲜美</span></div>
+                        <div class="feature-item"><i class="fas fa-apple-whole"></i><span>营养均衡</span></div>
                     </div>
                     <button class="product-btn">了解更多</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 产品详情模态框（对齐产品页样式） -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-mushroom"></i>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle">产品名称</h2>
+                    <div class="modal-tags" id="modalTags"></div>
+                    <p id="modalDescription">产品描述</p>
+                    <div class="modal-details" id="modalDetails"></div>
+                    <div class="modal-features" id="modalFeatures"></div>
+                    <div class="modal-nutrition">
+                        <h3>营养成分</h3>
+                        <div class="nutrition-grid" id="nutritionGrid"></div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn-primary">立即订购</button>
+                        <button class="btn-secondary">下载产品手册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 技术优势 -->
     <section class="tech-advantages">
@@ -324,47 +392,7 @@
         </div>
     </section>
 
-    <!-- 新闻动态 -->
-    <section class="news-section">
-        <div class="container">
-            <h2 class="section-title">最新动态</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-date">
-                        <span class="day">15</span>
-                        <span class="month">12月</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>项目正式启动</h3>
-                        <p>一口菇Mushbite智慧农业项目在新加坡裕廊工业区正式启动，总投资6000万新币</p>
-                        <a href="#" class="news-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">
-                        <span class="day">10</span>
-                        <span class="month">12月</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>技术合作签约</h3>
-                        <p>与荷兰农场技术公司签署合作协议，引进先进的发酵隧道技术</p>
-                        <a href="#" class="news-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">
-                        <span class="day">05</span>
-                        <span class="month">12月</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>菌种研发进展</h3>
-                        <p>与美国Sylvan菌种厂合作，成功研发适合新加坡气候的优质菌种</p>
-                        <a href="#" class="news-link">阅读更多 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- 页脚 -->
     <footer class="footer">
